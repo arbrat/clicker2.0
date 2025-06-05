@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image: url('https://via.placeholder.com/1920x1080/f0f0f0/cccccc?text=Стандартный+фон');
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background 0.5s;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+.tab.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#counter {
+    font-size: 36px;
+    margin: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cps {
+    font-size: 18px;
+    color: #FF5722;
+    font-weight: bold;
+}
+
+#main-clicker.round-clicker {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.1s;
+}
+
+#main-clicker.round-clicker:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.upgrades-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.upgrade {
+    background-color: #ffffff;
+    border: 2px solid #2196F3;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upgrade:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.upgrade:disabled {
+    background-color: #eeeeee;
+    border-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.upgrade-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #2196F3;
+}
+
+.upgrade-title {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.upgrade-power {
+    color: #2196F3;
+}
+
+.upgrade-cost {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.upgrade-owned {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.achievement {
+    background-color: #ffffff;
+    border: 2px solid #9C27B0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.achievement.locked {
+    opacity: 0.6;
+    border-color: #cccccc;
+}
+
+.achievement-title {
+    font-weight: bold;
+    color: #9C27B0;
+    margin-bottom: 5px;
+}
+
+.achievement-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.achievement-reward {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.roulette-button {
+    background-color: #FF5722;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.2s;
+}
+
+.roulette-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.roulette-button:hover:not(:disabled) {
+    background-color: #E64A19;
+}
+
+.roulette-wheel {
+    background-color: #ffffff;
+    border: 2px solid #FF5722;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#roulette-result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.background-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.background-option {
+    padding: 10px 15px;
+    background-color: #9C27B0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.background-option:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.background-option:hover:not(:disabled) {
+    background-color: #7B1FA2;
+}

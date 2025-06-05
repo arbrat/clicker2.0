@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мощный кликер PRO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="openTab('clicker')">Кликер</button>
+            <button class="tab" onclick="openTab('upgrades')">Улучшения</button>
+            <button class="tab" onclick="openTab('achievements')">Достижения</button>
+            <button class="tab" onclick="openTab('roulette')">Рулетка</button>
+            <button class="tab" onclick="openTab('stats')">Статистика</button>
+        </div>
+
+        <!-- Вкладка кликера -->
+        <div id="clicker" class="tab-content active">
+            <h1>Мощный кликер PRO</h1>
+            <div id="counter">0 кликов</div>
+            <div class="cps">Кликов в секунду: 0</div>
+            <button id="main-clicker" class="round-clicker">КЛИКАЙ!</button>
+        </div>
+
+        <!-- Вкладка улучшений -->
+        <div id="upgrades" class="tab-content">
+            <h2>Улучшения кликов</h2>
+            <div id="click-upgrades" class="upgrades-container"></div>
+            
+            <h2>Автокликеры</h2>
+            <div id="auto-upgrades" class="upgrades-container"></div>
+        </div>
+
+        <!-- Вкладка достижений -->
+        <div id="achievements" class="tab-content">
+            <h2>Достижения</h2>
+            <div id="achievements-list" class="achievements-container"></div>
+        </div>
+
+        <!-- Вкладка рулетки -->
+        <div id="roulette" class="tab-content">
+            <h2>Рулетка</h2>
+            <p>Стоимость одного вращения: 50,000 кликов</p>
+            <button id="spin-button" class="roulette-button">Крутить рулетку</button>
+            <div class="roulette-wheel">
+                <div id="roulette-result">Результат: -</div>
+            </div>
+        </div>
+
+        <!-- Вкладка статистики -->
+        <div id="stats" class="tab-content">
+            <h2>Статистика</h2>
+            <div class="stats-grid">
+                <div>Всего кликов: <span id="total-clicks">0</span></div>
+                <div>Кликов в секунду: <span class="cps">0</span></div>
+                <div>Куплено улучшений: <span id="total-upgrades">0</span></div>
+                <div>Сила клика: <span id="click-power">1</span></div>
+                <div>Получено достижений: <span id="achievements-earned">0</span>/<span id="achievements-total">0</span></div>
+                <div>Сыграно в рулетку: <span id="roulette-spins">0</span></div>
+            </div>
+            
+            <div id="background-selector">
+                <h3>Смена фона</h3>
+                <div class="background-options"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
